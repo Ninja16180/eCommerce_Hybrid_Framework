@@ -1,0 +1,69 @@
+Reference: https://www.youtube.com/watch?v=57pjD89IFXA&list=PLUDwpEzHYYLt2RzOb-_eafLAP0VSoyJhf&index=1
+Tutorial Github: https://github.com/pavanoltraining/nopCommerceProject
+
+IMP: pytest class name should start with 'Test'
+
+*command to run pytest testcases from command prompt :
+pytest -v -s testCases/test_login.py
+
+*.ini file is a config file. But our test case classes cant read directly from .ini file.
+We need to create an utility file through which data from .ini file is being read in the test case classes.
+
+* IMP: If for any webelement, click() is not working, then use execute_script() method:
+driver.execute_script(<webelement>.click())
+
+* In pytest, in order to group test cases, we need to use 'marker' and add @pytest.mark.<custom name> to test
+case class on top of specific test method. More than one markers can be added to a test method.
+In order to make pytest recognize these custom markers, we need to create pytest.ini file
+and need to add those markers in it.
+
+* Running test cases through .bat file : this will run test cases in command prompt outside pycharm
+Create this file in the same folder of your project file in the local system
+You can write multiple running commands BUT only the command you want to run at that moment, except that:
+put 'rem' infront of the other commands to ignore them at the runtime
+Go to the location where .bat file is saved and double click to run it
+
+* Continuous Integration through Jenkins:
+In realtime scenario: Jenkins is installed in the system of the Devops team members, they will share an url
+for Jenkins GUI which we have to access using our authorised credentials (Jenkins is a web based application).
+*Tester's responsibility is to set up testing project in Jenkins & ensure testing project is running
+successfully in Jenkins.
+
+*Open Jenkins GUI:
+http://localhost:8080/
+Initial admin pwd: fc52618049eb49c5a8e59a41e91fb597
+
+Set up Jenkins - Credentials:
+Username = Ninja16180
+pwd = 1qazZAQ!
+emai = vinci.16180@gmail.com
+
+----------
+
+Git:
+* Git command prompt: Go to the very directory in your local system> right click > git bash here
+
+Steps :
+1. git init <--creates empty git repo
+2. Establish connection between local git & remote github repo:
+    - Github repo url: https://github.com/Ninja16180/eCommerce_Hybrid_Framework.git
+    - Command: git remote add origin https://github.com/Ninja16180/eCommerce_Hybrid_Framework.git
+3. git commit
+Pre-req: Before running git commit for the first time, run these two commands:
+git config --global user.name "Ninja"
+git config --global user.email "vinci.16180@gmail.com"
+
+4. Add non committed files to staging area:
+git add -A
+
+
+
+
+
+
+
+
+
+
+
+
